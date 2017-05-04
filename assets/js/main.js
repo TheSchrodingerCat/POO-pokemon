@@ -29,11 +29,9 @@ function Pokemon(nombre,color,poderDeAtaque,nivelDeAmistad,vida){
 var pikachu = new Pokemon("Pikachu","amarillo",200,0,200);
 var charmander = new Pokemon("Charmander","rojo",20,0,100);
 
-//console.log("pikachu ataca a charmander: " + Pikachu.atacar(Charmander));
-//console.log("vida de charmander " + Charmander.vida);
 
-var poke = document.getElementById("pokemon");
+/*var poke = document.getElementById("pokemon");
 poke.innerHTML = pikachu.mostrarPokemon() + "<br \>" + "Nivel de amistad: " + pikachu.nivelDeAmistad + "<br \>" + 
 	"Vida: " + pikachu.vida + "<br \>" + "Poder de ataque: " + pikachu.poderDeAtaque + "<br \>" + 
 	"Nuevo nivel de amistad: " + pikachu.aumentarAmistad(30) + "<br \>" + 
-	"Pikachu ataca a Charmander.<br \>Nivel de vida final: " + pikachu.atacar(charmander);
+	"Pikachu ataca a Charmander.<br \>Nivel de vida final: " + pikachu.atacar(charmander);*/
