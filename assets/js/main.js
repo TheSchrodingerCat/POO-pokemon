@@ -17,9 +17,9 @@ function Pokemon(nombre,color,poderDeAtaque,nivelDeAmistad,vida){
 		pokemon.vida = pokemon.vida - this.poderDeAtaque;
 		var resultado;
 		if (pokemon.vida <= 0){
-			resultado = 0 + " (pokemon atacado muerto)";
+			resultado = 0;
 		} else {
-			resultado = pokemon.vida + " (pokemon atacado listo para nuevo ataque)"
+			resultado = pokemon.vida;
 		}
 		return resultado;
 	}
@@ -34,13 +34,18 @@ var bulbasaur = new Pokemon("Bulbasaur","verde",190,0,110);
 var poke1 = document.getElementById("select1");
 var poke2 = document.getElementById("select2");
 
-var pokemon1 = poke1.options[poke1.selectedIndex].class;
-var pokemon2 = poke2.options[poke2.selectedIndex].class;
 
-console.log(pokemon1 + "\n" + pokemon2);
+function pelear(){
+	var pokemon1 = poke1.options[poke1.selectedIndex].value;
+	var pokemon2 = poke2.options[poke2.selectedIndex].value;
 
-function pelear(pokemon1,pokemon2){
-	pokemon1.atacar(pokemon2);
+	var peleador1 = new Pokemon(pokemon1,pokemon1.color,50,pokemon1.nivelDeAmistad,200);
+	var peleador2 = new Pokemon(pokemon2,pokemon2.color,70,pokemon2.nivelDeAmistad,150);
+	
+	peleador1.atacar(peleador2);
+
+	var cuadrilatero = document.getElementById("ring");
+	cuadrilatero.innerHTML = peleador1.nombre + " ataca a " + peleador2.nombre + " y su nivel de vida queda en " + peleador2.vida
 }
 
 
