@@ -17,21 +17,23 @@ function Pokemon(nombre,color,poderDeAtaque,nivelDeAmistad,vida){
 		pokemon.vida = pokemon.vida - this.poderDeAtaque;
 		var resultado;
 		if (pokemon.vida <= 0){
-			resultado = 0 + " (pokemon muerto)"
+			resultado = 0 + " (pokemon atacado muerto)";
 		} else {
-			resultado = pokemon.vida
+			resultado = pokemon.vida + " (pokemon atacado listo para nuevo ataque)"
 		}
 		return resultado;
 	}
 }
 
-//cambiamos "const" por "var" porque los metodos aumentarAmistad() y atacar()
+//cambiamos "const" por "var" porque los metodos aumentarAmistad() y atacar() se reasignan, lo cual genera conflictos con "const"
 var pikachu = new Pokemon("Pikachu","amarillo",200,0,200);
 var charmander = new Pokemon("Charmander","rojo",20,0,100);
 
 //console.log("pikachu ataca a charmander: " + Pikachu.atacar(Charmander));
 //console.log("vida de charmander " + Charmander.vida);
 
-console.log(pikachu.mostrarPokemon() + "Nivel de amistad: " + pikachu.nivelDeAmistad + "\n" + 
-	pikachu.vida + "\n" + pikachu.poderDeAtaque + "\n" + "\n" + 
-	pikachu.aumentarAmistad(30) + "\n" + pikachu.atacar(charmander));
+var poke = document.getElementById("pokemon");
+poke.innerHTML = pikachu.mostrarPokemon() + "<br \>" + "Nivel de amistad: " + pikachu.nivelDeAmistad + "<br \>" + 
+	"Vida: " + pikachu.vida + "<br \>" + "Poder de ataque: " + pikachu.poderDeAtaque + "<br \>" + 
+	"Nuevo nivel de amistad: " + pikachu.aumentarAmistad(30) + "<br \>" + 
+	"Pikachu ataca a Charmander.<br \>Nivel de vida final: " + pikachu.atacar(charmander);
