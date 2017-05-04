@@ -31,7 +31,17 @@ var charmander = new Pokemon("Charmander","rojo",200,0,100);
 var squirtle = new Pokemon("Squirtle","azul",150,0,50);
 var bulbasaur = new Pokemon("Bulbasaur","verde",190,0,110);
 
+var poke1 = document.getElementById("select1");
+var poke2 = document.getElementById("select2");
 
+var pokemon1 = poke1.options[poke1.selectedIndex].class;
+var pokemon2 = poke2.options[poke2.selectedIndex].class;
+
+console.log(pokemon1 + "\n" + pokemon2);
+
+function pelear(pokemon1,pokemon2){
+	pokemon1.atacar(pokemon2);
+}
 
 
 
