@@ -26,8 +26,24 @@ function Pokemon(nombre,color,poderDeAtaque,nivelDeAmistad,vida){
 }
 
 //cambiamos "const" por "var" porque los metodos aumentarAmistad() y atacar() se reasignan, lo cual genera conflictos con "const"
-var pikachu = new Pokemon("Pikachu","amarillo",200,0,200);
-var charmander = new Pokemon("Charmander","rojo",20,0,100);
+var pikachu = new Pokemon("Pikachu","amarillo",20,0,200);
+var charmander = new Pokemon("Charmander","rojo",200,0,100);
+var squirtle = new Pokemon("Squirtle","azul",150,0,50);
+var bulbasaur = new Pokemon("Bulbasaur","verde",190,0,110);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*var poke = document.getElementById("pokemon");
