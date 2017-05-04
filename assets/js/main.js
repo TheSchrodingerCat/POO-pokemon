@@ -42,10 +42,14 @@ function pelear(){
 	var peleador1 = new Pokemon(pokemon1,pokemon1.color,50,pokemon1.nivelDeAmistad,200);
 	var peleador2 = new Pokemon(pokemon2,pokemon2.color,70,pokemon2.nivelDeAmistad,150);
 	
-	peleador1.atacar(peleador2);
+	if (peleador1.nombre == peleador2.nombre){
+		alert("El pokemon no puede atacarse a sí mismo. Elige otro pokemon.");
+	} else {
+		peleador1.atacar(peleador2);
 
-	var cuadrilatero = document.getElementById("ring");
-	cuadrilatero.innerHTML = peleador1.nombre + " ataca a " + peleador2.nombre + " y su nivel de vida queda en " + peleador2.vida
+		var cuadrilatero = document.getElementById("ring");
+		cuadrilatero.innerHTML = peleador1.nombre + " ataca a " + peleador2.nombre + " y su nivel de vida queda en " + peleador2.vida;
+	}
 }
 
 

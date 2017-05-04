@@ -1,32 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Pokemon-battle</title>
-	<style type="text/css">
-		body {
-			background-color: purple;
-			color: pink;
-			margin: auto;
-			text-align: center;
-		}
-		div {
-			background-color: black;
-			margin: auto;
-			padding: 50px;
-			width: 50%;
-		}
-		h1 {
-			color: white;
-			font-size: 90px;
-		}
-		
-
-	</style>
+<meta charset="UTF-8">
+<title>Pokemon-battle</title>
+<link href="assets/css/main.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 	<h1>Batalla Pokemon</h1>
-	<div id="ring">
+	<div>
 		<select name="Pokemon 1" id="select1">
 			<option value="poke0">Pokemon 1</option>
 			<option value="pikachu">Pikachu</option>
@@ -41,8 +22,9 @@
 			<option value="squirtle">Squirtle</option>
 			<option value="bulbasaur">Bulbasaur</option>
 		</select>
-		<button id="botoncillo" onclick="pelear()">Pelear</button><br>
+		<button id="botoncillo" onclick="pelear()">Pelear</button>
 	</div>
+	<div id="ring"></div>
 	<script type="text/javascript" src="assets/js/main.js"></script>
 </body>
 </html>

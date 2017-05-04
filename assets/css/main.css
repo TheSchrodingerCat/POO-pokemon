@@ -1,0 +1,16 @@
+body {
+	background-color: purple;
+	color: green;
+	margin: auto;
+	text-align: center;
+}
+div {
+	background-color: black;
+	margin: auto;
+	padding: 50px;
+	width: 50%;
+}
+h1 {
+	color: white;
+	font-size: 90px;
+}
